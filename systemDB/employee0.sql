@@ -11,13 +11,13 @@ CREATE Table employee0(
 
 --사원자료 추가
 INSERT INTO employee0(empid,empname,age,deptid) 
-VALUES(101,'SB','24',10);
+VALUES(101,'SB',24,10);
 INSERT INTO employee0(empid,empname,age,deptid) 
-VALUES(102,'KSB','23',30); --부서코드가 없어서 외래키 제약조건위배
+VALUES(102,'KSB',22,30); --부서코드가 없어서 외래키 제약조건위배,삽입 이상
 INSERT INTO employee0(empid,empname,deptid) 
 VALUES(103,'GSB',20);
-INSERT INTO employee0(empid, empname,age) 
-VALUES(104,'HH','22');
+INSERT INTO employee0(empid, empname,age,deptid) 
+VALUES(104,'HH',22,20);
 
 
 --모든사원정보출력
@@ -39,6 +39,14 @@ WHERE deptid = 20;
 --나이정보가 없는사원검색
 SELECT*FROM employee0
 WHERE age IS NULL;
+
+--문자열검색 (사원이름에서 'S'을포함하고 나이가 저장되지 않은 사원검색) LIKE '%문자%';
+--'%B'; 
+SELECT*FROM employee0
+WHERE empname LIKE '%B' AND age IS NULL;
+
+SELECT*FROM employee0
+WHERE empname LIKE '%B' OR age IS NULL;
 
 
 COMMIT;

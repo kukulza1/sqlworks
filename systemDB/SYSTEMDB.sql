@@ -26,8 +26,13 @@ WHERE deptname = '전산팀';
 UpDATE department SET deptname = '경영팀'
 WHERE deptid = 20;
 
---삭제 
-DELETE depar
+--자료삭제 (마케팅팀삭제)
+DELETE FROM department
+WHERE deptid = 30;
+
+--삭제이상 (자식이 참조하고있으므로 삭제불가)
+DELETE FROM department
+WHERE deptid = 10;
 
 ROLLBACK; --COMMIT이전에만 롤백(취소)가능 커밋후엔 롤백불가
 
