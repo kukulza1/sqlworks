@@ -41,7 +41,7 @@ SELECT*FROM employee0
 WHERE age IS NULL;
 
 --문자열검색 (사원이름에서 'S'을포함하고 나이가 저장되지 않은 사원검색) LIKE '%문자%';
---'%B'; 
+--'%B'; '%B%; 'B%';
 SELECT*FROM employee0
 WHERE empname LIKE '%B' AND age IS NULL;
 

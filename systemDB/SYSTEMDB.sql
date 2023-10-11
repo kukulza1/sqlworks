@@ -30,7 +30,7 @@ WHERE deptid = 20;
 DELETE FROM department
 WHERE deptid = 30;
 
---삭제이상 (자식이 참조하고있으므로 삭제불가)
+--삭제이상 (상속받은테이블이 참조하고있으므로 삭제불가)
 DELETE FROM department
 WHERE deptid = 10;
 
