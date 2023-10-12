@@ -10,6 +10,6 @@ CREATE TABLE users(
 INSERT INTO USERS VALUES('TODAY','°í¿À´Ã','12345',25,'today@korea.kr');
 
 select*from users where userid = 'TODAY';
-
+select*from users;
 commit;
 drop table users;
