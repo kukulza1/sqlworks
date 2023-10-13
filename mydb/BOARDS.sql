@@ -21,10 +21,19 @@ VALUES (seq_bno.nextval,'smartphone','삼성갤럭시21입니다.','TODAY',SYSDATE,
 
 
 SELECT*FROM BOARDS 
-where bwriter ='SKY123'
+
 ORDER BY bno DESC;
 
-COMMIT;
+--글번호 6번의 제목을 아이폰으로 변경
+update  boards set btitle = 'iphone' , bcontent= '아이폰15입니다'
+where bno =6;
+
+delete from boards
+where bno =1;
+
+rollback;
+
+COMMIt;
 
 
 
