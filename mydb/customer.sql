@@ -15,5 +15,7 @@ INSERT INTO customer(cusid,name,address,phone)
 values (4,'류현진','미국 토론토','');
 INSERT INTO customer(cusid,name,address,phone)
 values (5,'손흥민','영국 토트넘','000-8000-0001');
+INSERT INTO customer(cusid,name,address,phone)
+values (6,'성우영','인천','031-8000-0001');
 
 commit;
