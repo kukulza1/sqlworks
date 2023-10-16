@@ -44,7 +44,7 @@ ORDER BY CUS.name;
 --내부조인(INNER JOIN)
 --고객customer과 고객의주문orders에 관한 데이터중고객의 이름과 고객이주문한 도서의 판매가격을 검색하시오
 SELECT cus.name,ord.saleprice
-FROM customer cus INNER JOIN orders ord
+FROM customer cus INNER JOIN orders ord --inner생략가능
  ON CUS.CUSID =ord.cusid
  order by cus.name;
  

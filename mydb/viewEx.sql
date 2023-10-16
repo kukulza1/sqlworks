@@ -17,6 +17,16 @@ where name = '김연아';
 delete from vw_customer  where cusid = 3;
 
 commit;
+--고객과 고객의주문에 관한 정보를 검색
+create view vw_book_order as 
+select cs.name,bk.bookname,od.saleprice
+from book bk,customer cs, orders od
+where bk.bookid = od.bookid and cs.cusid=od.cusid;
+
+select *from vw_book_order;
+
+select count(*) from vw_book_order;
+
 
 
 --뷰 삭제

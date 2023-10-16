@@ -56,7 +56,21 @@ round(salary/30,0) 일당,
 round(salary/30,1) 일당
 from emp;
  
- 
+SELECT *FROM EMP;
+--급여가 가장많은 사원을 검색하시오
+--서브쿼리,중첩쿼리(메인쿼리,서브쿼리)
+SELECT *FROM EMP
+WHERE SALARY = (SELECT MAX(SALARY)FROM EMP) ;
+--급여가 가장많은 사원과 가장적은사원을 검색하시오
+SELECT ENAME FROM EMP
+WHERE SALARY = (SELECT MAX(SALARY)FROM EMP) 
+OR SALARY = (SELECT MIN(SALARY)FROM EMP);
+
+
+
+
+
+
 
 
 
