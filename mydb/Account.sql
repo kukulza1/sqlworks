@@ -10,3 +10,10 @@ INSERT INTO account values ('11-11-111','SB',10000);
 commit;
 
 select*from account;
+rollback;
+update account set balance =444
+where ano = '33-33-333';
+
+TRUNCATE table account;
+
+delete from account where owner = 'ksb';
