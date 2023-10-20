@@ -1,13 +1,16 @@
---조인 : 두 테이블을 서로 연결하여 사용하는기능
+H--조인 : 두 테이블을 서로 연결하여 사용하는기능
 --동등조인(equi join):조인조건이 정확히 일치하는 경우에 결과 출력
 --외부조인(out join):조인조건이 일치하지 않아도 모든 결과를 출력
 --자체조인:
 
 --고객(customer)과 고객의주문(orders)에 관한 데이터를 모두 검색하시오 (동등조인)
 --고객이름으로 정렬(자동으로 그룹화 됨)
-SELECT cus.name,ord.saleprice FROM CUSTOMER cus,orders ord
+ss;
+
+select cus.name,ord.saleprice FROM CUSTOMER cus,orders ord
 WHERE cus.cusid = ord.cusid
 ORDER BY CUS.name;
+
 
 --주문하지않은 데이터도 모두 검색 (외부조인)
 --조건이 일치하지않은 테이블에 +를넣어줌
