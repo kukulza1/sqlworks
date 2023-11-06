@@ -56,7 +56,13 @@ FROM customer cus INNER JOIN orders ord --inner생략가능
  --도서의 판매가격을검색하시오
  SELECT CUS.NAME,ORD.SALEPRICE
  FROM CUSTOMER CUS LEFT OUTER JOIN ORDERS ORD
- ON CUS.CUSID=ORD.CUSID;
+ ON CUS.CUSID=ORD.cusID;
+
+
+
+
+
+
 
 
 
