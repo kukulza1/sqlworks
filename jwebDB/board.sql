@@ -25,7 +25,7 @@ update board set title='1234', content='222' where bno=5;
 
 
 update board set hit= hit+1 where bno=10;
-
+delete from board;
 
 
 drop sequence seq_bno;
